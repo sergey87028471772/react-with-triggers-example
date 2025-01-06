@@ -4,7 +4,7 @@ import { Element } from "./element";
 import { Header } from "./header";
 
 export function TodoList() {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(() => []);
 
   const handleAddElement = useCallback(() => {
     setList((prev) => [...prev, { id: Date.now(), count: 0 }]);

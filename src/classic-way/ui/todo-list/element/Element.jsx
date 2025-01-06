@@ -3,15 +3,15 @@ import { useCallback } from "react";
 export function Element({ id, count, onDeleteElement, onChangeCount }) {
   const handleDeleteElement = useCallback(() => {
     onDeleteElement(id);
-  }, []);
+  }, [id, onDeleteElement]);
 
   const handlePlusOne = useCallback(() => {
     onChangeCount(id, 1);
-  }, []);
+  }, [id, onChangeCount]);
 
   const handleMinusOne = useCallback(() => {
     onChangeCount(id, -1);
-  }, []);
+  }, [id, onChangeCount]);
 
   return (
     <div className="element">
