@@ -31,5 +31,5 @@ export const useManualUpdate = (componentId) => {
     return () => {
       updateStore.unsubscribe(componentId);
     };
-  }, []);
+  }, [componentId]);
 };

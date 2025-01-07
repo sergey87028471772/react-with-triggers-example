@@ -1,1 +1,1 @@
-export { TodoList } from "./TodoList";
+export { TodoList as TodoListWithoutProblems } from "./TodoList";
